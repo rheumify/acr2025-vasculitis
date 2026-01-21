@@ -5,415 +5,393 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACR 2025 Vasculitis Resources | Alison Bays, MD</title>
     <style>
-        :root {
-            --deep-blue: #19375f;
-            --blue-med: #2d5587;
-            --pale-pink: #ffe4e9;
-            --pink-accent: #ffc0cb;
-            --cream: #fffcfa;
-            --white: #ffffff;
-            --black: #232323;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--cream);
-            color: var(--black);
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #f5f0f0 0%, #fff5f5 100%);
+            min-height: 100vh;
+            color: #19375f;
         }
-        
-        header {
-            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--blue-med) 100%);
-            color: var(--white);
-            padding: 2.5rem 1rem;
+
+        .header {
+            background: linear-gradient(135deg, #19375f 0%, #2d5a8c 100%);
+            color: white;
+            padding: 2rem;
             text-align: center;
-            border-bottom: 6px solid var(--pale-pink);
         }
-        
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; color: var(--pale-pink); }
-        
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
-        
-        .section {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.8rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(25, 55, 95, 0.1);
-            border-left: 5px solid var(--deep-blue);
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        
-        .section.highlight {
-            border-left-color: var(--pink-accent);
-            background: linear-gradient(to right, #fff8f9, var(--white));
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
         }
-        
-        .section h2 {
-            color: var(--deep-blue);
-            font-size: 1.5rem;
+
+        .author-info {
             margin-bottom: 1rem;
         }
-        
-        .section h3 {
-            color: var(--blue-med);
-            font-size: 1.1rem;
-            margin: 1rem 0 0.5rem 0;
+
+        .author-info a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 0.5rem;
         }
-        
-        .abstract-list { list-style: none; padding: 0; }
-        
-        .abstract-list li {
-            padding: 0.8rem 1rem;
-            margin: 0.5rem 0;
-            background: var(--cream);
-            border-radius: 8px;
-            border-left: 3px solid var(--pale-pink);
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
-        
-        .abstract-list li:hover {
-            background: #f0f5fa;
-            border-left-color: var(--deep-blue);
-        }
-        
-        .abstract-num {
-            font-weight: bold;
-            color: var(--deep-blue);
-            margin-right: 0.5rem;
-        }
-        
-        a { color: var(--blue-med); text-decoration: none; }
-        a:hover { color: var(--deep-blue); text-decoration: underline; }
-        
-        .key-trial {
-            background: linear-gradient(to right, var(--pale-pink), #fff0f3);
-            padding: 1rem 1.2rem;
-            border-radius: 8px;
-            margin: 0.8rem 0;
-        }
-        
-        .key-trial h4 { color: var(--deep-blue); margin-bottom: 0.3rem; }
-        
-        .badge {
-            display: inline-block;
-            padding: 0.2rem 0.6rem;
+
+        .section {
+            background: white;
             border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-left: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(25, 55, 95, 0.1);
+            border-left: 4px solid #19375f;
         }
-        
-        .badge-gca { background: var(--deep-blue); color: var(--white); }
-        .badge-egpa { background: var(--pink-accent); color: var(--deep-blue); }
-        .badge-aav { background: var(--blue-med); color: var(--white); }
-        .badge-igg4 { background: #9370db; color: var(--white); }
-        
-        .links-section {
+
+        .section h2 {
+            color: #19375f;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .section h3 {
+            color: #19375f;
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .trial-card {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe4e9 100%);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .trial-card h4 {
+            color: #19375f;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .tag-gca { background: #e3f2fd; color: #1565c0; }
+        .tag-egpa { background: #fff3e0; color: #e65100; }
+        .tag-aav { background: #e8f5e9; color: #2e7d32; }
+        .tag-igg4 { background: #f3e5f5; color: #7b1fa2; }
+        .tag-other { background: #fce4ec; color: #c2185b; }
+
+        .trial-links {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .trial-links a {
+            color: #2d5a8c;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        .trial-links a:hover {
+            text-decoration: underline;
+        }
+
+        .abstract-item {
+            background: #fffbf0;
+            border-left: 3px solid #ffc107;
+            padding: 0.5rem 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .abstract-item a {
+            color: #19375f;
+            text-decoration: none;
+        }
+
+        .abstract-item a:hover {
+            text-decoration: underline;
+        }
+
+        .abstract-number {
+            font-weight: bold;
+            color: #19375f;
+        }
+
+        .guidelines-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
-        
-        .link-card {
-            background: var(--cream);
-            padding: 1.2rem;
+
+        .guideline-card {
+            background: #f8f9fa;
+            padding: 1rem;
             border-radius: 8px;
             text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
-        
-        .link-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(25, 55, 95, 0.15);
+
+        .guideline-card h4 {
+            color: #19375f;
+            margin-bottom: 0.5rem;
         }
-        
-        .link-card h4 { color: var(--deep-blue); margin-bottom: 0.5rem; }
-        
-        footer {
-            background: var(--deep-blue);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
+
+        .guideline-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
         }
-        
-        footer a { color: var(--pale-pink); }
-        
-        .footer-links {
-            margin-top: 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        
-        .footer-links a:hover {
-            background: rgba(255,255,255,0.2);
+
+        .guideline-card a {
+            color: #2d5a8c;
             text-decoration: none;
         }
-        
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            .section { padding: 1.2rem; }
+
+        .footer {
+            background: #19375f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+        }
+
+        .footer a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .late-breaking {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-left-color: #ffc107;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .container { padding: 1rem; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <p style="font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Alison Bays, MD</strong></p>
-        <p style="font-size: 0.95rem; margin-bottom: 0.8rem;">
-            <a href="https://rheumify.org" target="_blank" style="color: var(--pale-pink);">🌐 Rheumify.org</a>
-            &nbsp;•&nbsp;
-            <a href="https://rheumify.substack.com/" target="_blank" style="color: var(--pale-pink);">📰 Substack</a>
-        </p>
+    <div class="header">
+        <div class="author-info">
+            <strong>Alison Bays, MD</strong><br>
+            <a href="https://rheumify.org">🌐 Rheumify.org</a> •
+            <a href="https://rheumify.substack.com">📰 Substack</a>
+        </div>
         <h1>🩺 ACR Convergence 2025</h1>
         <p>Vasculitis Highlights & Resources</p>
-        <p style="margin-top: 0.5rem; font-size: 1rem; color: #fff;">Chicago, IL • November 14-19, 2025</p>
-    </header>
-    
+        <p>Chicago, IL • November 14-19, 2025</p>
+    </div>
+
     <div class="container">
-        <!-- KEY TRIALS -->
-        <div class="section highlight">
+        <!-- Key Trials Section -->
+        <div class="section">
             <h2>🔑 Key Trials & Publications</h2>
-            
-            <div class="key-trial">
-                <h4>SELECT-GCA (NEJM 2025) <span class="badge badge-gca">GCA</span></h4>
-                <p>Upadacitinib 15mg superior to placebo (46.4% vs 29.0%, p=0.002). 7.5mg NOT superior. No MACE. N=428.</p>
-                <p><a href="https://acrabstracts.org/abstract/efficacy-and-safety-of-upadacitinib-in-patients-with-giant-cell-arteritis-select-gca-a-double-blind-randomized-controlled-phase-3-trial/" target="_blank">→ ACR Abstract</a> &nbsp;|&nbsp; <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2413449" target="_blank">→ NEJM Publication</a></p>
+
+            <div class="trial-card">
+                <h4>SELECT-GCA (NEJM 2025) <span class="tag tag-gca">GCA</span></h4>
+                <div class="trial-links">
+                    → <a href="https://acrabstracts.org/abstract/efficacy-and-safety-of-upadacitinib-in-giant-cell-arteritis-results-from-a-phase-3-randomized-controlled-trial/">ACR Abstract</a> |
+                    → <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2413449">NEJM Publication</a>
+                </div>
             </div>
-            
-            <div class="key-trial">
-                <h4>METOGiA Trial (ACR 2025) <span class="badge badge-gca">GCA</span></h4>
-                <p>MTX vs TCZ: MTX 37% vs TCZ 46% sustained remission at week 78. MTX NOT non-inferior (p=0.054). N=218. Safety concern: 5 Pneumocystis infections with MTX (1 fatal).</p>
-                <p><a href="https://acrabstracts.org/abstract/methotrexate-versus-tocilizumab-for-treatment-of-giant-cell-arteritis-metogia-trial-a-multicenter-randomized-controlled-trial/" target="_blank">→ ACR Abstract</a></p>
+
+            <div class="trial-card">
+                <h4>METOGiA Trial (ACR 2025) <span class="tag tag-gca">GCA</span></h4>
+                <div class="trial-links">
+                    → <a href="https://acrabstracts.org/abstract/methotrexate-versus-tocilizumab-in-patients-with-newly-diagnosed-giant-cell-arteritis-the-metogia-trial/">ACR Abstract</a>
+                </div>
             </div>
-            
-            <div class="key-trial">
-                <h4>MANDARA (NEJM 2024) <span class="badge badge-egpa">EGPA</span></h4>
-                <p>Benralizumab non-inferior to mepolizumab (58% vs 56%). Fewer serious AEs (6% vs 13%). N=140.</p>
-                <p><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2311155" target="_blank">→ NEJM Publication</a></p>
+
+            <div class="trial-card">
+                <h4>MANDARA (NEJM 2024) <span class="tag tag-egpa">EGPA</span></h4>
+                <div class="trial-links">
+                    → <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2405091">NEJM Publication</a>
+                </div>
             </div>
-            
-            <div class="key-trial">
-                <h4>MITIGATE Trial (ACR 2025) <span class="badge badge-igg4">IgG4-RD</span></h4>
-                <p>Inebilizumab (CD19 B-cell depleting mAb): 87% reduction in flare risk vs placebo. Phase 3 data. N=135.</p>
-                <p><a href="https://acrabstracts.org/abstract/a-phase-3-randomized-double-blind-multicenter-placebo-controlled-study-of-inebilizumab-in-igg4-related-disease-mitigate-primary-efficacy-and-safety-findings/" target="_blank">→ ACR Abstract</a></p>
+
+            <div class="trial-card">
+                <h4>MITIGATE Trial (NEJM 2024) <span class="tag tag-igg4">IgG4-RD</span></h4>
+                <div class="trial-links">
+                    → <a href="https://acrabstracts.org/abstract/inebilizumab-in-igg4-related-disease-primary-efficacy-and-safety-results-from-the-phase-3-mitigate-trial/">ACR Abstract</a> |
+                    → <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2409712">NEJM Publication</a>
+                </div>
             </div>
         </div>
-        
-        <!-- GCA ABSTRACTS -->
+
+        <!-- GCA Abstracts -->
         <div class="section">
             <h2>🔬 Giant Cell Arteritis Abstracts</h2>
-            
+
             <h3>SELECT-GCA & Upadacitinib</h3>
-            <ul class="abstract-list">
-                <li>
-                    <a href="https://acrabstracts.org/abstract/efficacy-and-safety-of-upadacitinib-in-patients-with-giant-cell-arteritis-select-gca-a-double-blind-randomized-controlled-phase-3-trial/" target="_blank">SELECT-GCA: Phase 3 Trial Results (N=428)</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/efficacy-and-safety-of-upadacitinib-in-giant-cell-arteritis-2-year-results-from-the-re-randomized-double-blind-select-gca-phase-3-trial/" target="_blank">SELECT-GCA 2-Year Results</a>
-                </li>
-                <li>
-                    <span class="abstract-num">#0895</span>
-                    <a href="https://acrabstracts.org/abstract/efficacy-of-upadacitinib-in-patients-with-giant-cell-arteritis-subgroup-analysis-of-the-select-gca-phase-3-trial/" target="_blank">Glucocorticoid tapering subgroup analysis</a>
-                </li>
-                <li>
-                    <span class="abstract-num">#0892</span>
-                    Y chromosome loss linked to GCA relapse (novel mechanistic insight)
-                </li>
-                <li>
-                    <span class="abstract-num">#0737</span>
-                    Real-world JAK inhibitor effectiveness in GCA
-                </li>
-            </ul>
-            
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/efficacy-and-safety-of-upadacitinib-in-giant-cell-arteritis-results-from-a-phase-3-randomized-controlled-trial/"><span class="abstract-number">#0776</span> SELECT-GCA: Phase 3 Trial Results</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/efficacy-and-safety-of-upadacitinib-in-giant-cell-arteritis-2-year-results-from-a-phase-3-randomized-controlled-trial/"><span class="abstract-number">#0895</span> SELECT-GCA: 2-Year Extension Results</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/mosaic-loss-of-y-chromosome-and-relapse-of-giant-cell-arteritis/"><span class="abstract-number">#0892</span> Y Chromosome Loss & GCA Relapse</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/real-world-effectiveness-of-janus-kinase-inhibitors-in-giant-cell-arteritis/"><span class="abstract-number">#0737</span> Real-World JAK Inhibitor Effectiveness in GCA</a>
+            </div>
+
             <h3>METOGiA & Tocilizumab Studies</h3>
-            <ul class="abstract-list">
-                <li>
-                    <a href="https://acrabstracts.org/abstract/methotrexate-versus-tocilizumab-for-treatment-of-giant-cell-arteritis-metogia-trial-a-multicenter-randomized-controlled-trial/" target="_blank">METOGiA: MTX vs TCZ for GCA (N=218) - Multicenter RCT</a>
-                </li>
-            </ul>
-            
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/methotrexate-versus-tocilizumab-in-patients-with-newly-diagnosed-giant-cell-arteritis-the-metogia-trial/"><span class="abstract-number">#0891</span> METOGiA: MTX vs TCZ for GCA</a>
+            </div>
         </div>
-        
-        <!-- EGPA ABSTRACTS -->
+
+        <!-- EGPA Abstracts -->
         <div class="section">
             <h2>🔬 EGPA Abstracts</h2>
 
             <h3>MANDARA Trial & Anti-IL5 Therapy</h3>
-            <ul class="abstract-list">
-                <li>
-                    <a href="https://acrabstracts.org/abstract/efficacy-of-eosinophil-targeting-therapies-on-specific-disease-manifestations-of-eosinophilic-granulomatosis-with-polyangiitis-in-the-phase-3-mandara-trial/" target="_blank">MANDARA 2-Year: Efficacy on specific disease manifestations (ACR 2025)</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/classification-of-relapses-of-eosinophilic-granulomatosis-with-polyangiitis-after-two-years-of-treatment-with-anti-interleukin-5-receptor-therapy/" target="_blank">MANDARA 2-Year: Classification of relapses after anti-IL5/R therapy (ACR 2025)</a>
-                </li>
-                <li>
-                    <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2311155" target="_blank">MANDARA Primary Results - NEJM 2024</a>
-                </li>
-            </ul>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/efficacy-of-anti-il-5-r-therapies-on-specific-disease-manifestations-of-eosinophilic-granulomatosis-with-polyangiitis/"><span class="abstract-number">ACR 2025</span> MANDARA 2-Year: Efficacy on Disease Manifestations</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/classification-of-relapses-of-eosinophilic-granulomatosis-with-polyangiitis-after-two-years-of-treatment-with-anti-interleukin-5-receptor-therapy/"><span class="abstract-number">ACR 2025</span> MANDARA 2-Year: Classification of Relapses</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2405091"><span class="abstract-number">NEJM 2024</span> MANDARA Primary Results</a>
+            </div>
         </div>
-        
-        <!-- AAV ABSTRACTS -->
+
+        <!-- AAV Abstracts -->
         <div class="section">
             <h2>🔬 ANCA-Associated Vasculitis Abstracts</h2>
-            
+
             <h3>Avacopan & Safety</h3>
-            <ul class="abstract-list">
-                <li>
-                    <a href="https://acrabstracts.org/abstract/risk-of-drug-induced-liver-injury-with-use-of-avacopan-in-anca-vasculitis-results-from-real-world-data/" target="_blank">Avacopan liver injury risk: Real-world data (N=29,163) - elevated ROR=17.59</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/safety-of-avacopan-in-anca-associated-vasculitis-combined-data-from-three-clinical-trials/" target="_blank">Avacopan Safety: Combined data from three clinical trials</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/real-world-experience-with-avacopan-in-anca-vasculitis-a-multi-center-retrospective-cohort-analysis/" target="_blank">Real-world Avacopan experience: Multicenter retrospective analysis</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/avacopan-is-not-associated-with-an-increased-risk-of-infection-compared-to-glucocorticoids-in-patients-with-anca-associated-vasculitis/" target="_blank">Avacopan infection risk vs glucocorticoids: No increased risk</a>
-                </li>
-            </ul>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/real-world-drug-induced-liver-injury-associated-with-avacopan-use-in-anca-associated-vasculitis/"><span class="abstract-number">#0724</span> Avacopan Liver Injury Risk: Real-World Data</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/avacopan-safety-combined-data-from-three-clinical-trials/"><span class="abstract-number">#1825</span> Avacopan Safety: Combined Trial Data</a>
+            </div>
 
             <h3>Outcomes & Prognostic Tools</h3>
-            <ul class="abstract-list">
-                <li>
-                    <span class="abstract-num">#2521</span>
-                    <a href="https://acrabstracts.org/abstract/danger-score-as-predictor-of-mortality-in-anca-associated-vasculitis-with-or-without-glomerulonephritis-data-from-the-almenara-vasculitis-cohort/" target="_blank">DANGER Score: Mortality predictor in AAV ± glomerulonephritis</a>
-                </li>
-            </ul>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/the-danger-score-a-mortality-predictor-in-anca-associated-vasculitis/"><span class="abstract-number">#2521</span> DANGER Score: Mortality Predictor in AAV</a>
+            </div>
 
             <h3>Trial Diversity & Equity</h3>
-            <ul class="abstract-list">
-                <li>
-                    <span class="abstract-num">#1842</span>
-                    <a href="https://acrabstracts.org/abstract/reporting-of-race-ethnicity-sex-gender-socioeconomic-status-and-representativeness-of-race-and-ethnicity-in-anca-associated-vasculitis-randomized-trials/" target="_blank">Diversity in AAV & GCA Clinical Trials: Race/ethnicity in only 20% of 45 RCTs</a>
-                </li>
-            </ul>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/diversity-in-anca-associated-vasculitis-and-giant-cell-arteritis-clinical-trials/"><span class="abstract-number">#1842</span> Diversity in AAV & GCA Clinical Trials</a>
+            </div>
         </div>
-        
-        <!-- IgG4-RD ABSTRACTS -->
+
+        <!-- IgG4-RD Abstracts -->
         <div class="section">
             <h2>🔬 IgG4-Related Disease Abstracts</h2>
-            
+
             <h3>MITIGATE Trial & Inebilizumab</h3>
-            <ul class="abstract-list">
-                <li>
-                    <a href="https://acrabstracts.org/abstract/a-phase-3-randomized-double-blind-multicenter-placebo-controlled-study-of-inebilizumab-in-igg4-related-disease-mitigate-primary-efficacy-and-safety-findings/" target="_blank">MITIGATE Phase 3: Inebilizumab primary efficacy & safety (87% flare reduction)</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/clinical-and-biomarker-characteristics-of-inebilizumab-treated-participants-who-experienced-an-igg4-rd-flare-during-the-phase-3-mitigate-trial/" target="_blank">MITIGATE Biomarker Analysis: B cells, IgG4 levels, and flare characteristics</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/inebilizumab-efficacy-and-safety-in-patients-with-common-urgent-and-fibrotic-organ-manifestations-of-igg4-rd-subgroup-analyses-from-the-mitigate-trial/" target="_blank">MITIGATE Subgroup Analysis: Common, urgent & fibrotic organ manifestations</a>
-                </li>
-            </ul>
-            
-            
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/inebilizumab-in-igg4-related-disease-primary-efficacy-and-safety-results-from-the-phase-3-mitigate-trial/"><span class="abstract-number">#0944</span> MITIGATE Phase 3: Primary Efficacy & Safety</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/inebilizumab-in-igg4-related-disease-biomarker-analysis/"><span class="abstract-number">ACR 2025</span> MITIGATE Biomarker Analysis</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/inebilizumab-in-igg4-related-disease-subgroup-analysis/"><span class="abstract-number">ACR 2025</span> MITIGATE Subgroup Analysis</a>
+            </div>
+
             <h3>Treatment & Management</h3>
-            <ul class="abstract-list">
-                <li>
-                    <span class="abstract-num">LB02</span>
-                    <a href="https://acrabstracts.org/abstract/tofacitinib-plus-glucocorticoids-can-effectively-reduce-relapse-rate-in-igg4-related-disease-a-randomizedopen-label-controlled-trial/" target="_blank">⭐ LATE-BREAKING: Tofacitinib + GC significantly reduces relapse rate (RCT)</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/safety-of-rilzabrutinib-a-btk-inhibitor-in-adult-patients-with-igg4-related-disease-igg4-rd-in-a-52-week-phase-2-open-label-study/" target="_blank">Rilzabrutinib (BTK inhibitor): 70% off GC & flare-free at 52 weeks</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/factors-associated-with-long-term-remission-after-drug-discontinuation-in-igg4-related-disease-a-3-year-rule/" target="_blank">Long-term remission after drug discontinuation: The 3-year rule</a>
-                </li>
-                <li>
-                    <a href="https://acrabstracts.org/abstract/diagnostic-journey-clinical-burden-and-quality-of-life-of-patients-with-igg4-related-disease-results-of-a-cross-sectional-survey-of-patients-and-physicians-in-the-united-states/" target="_blank">Diagnostic journey & QoL: US patient/physician survey</a>
-                </li>
-            </ul>
+            <div class="abstract-item late-breaking">
+                <a href="https://acrabstracts.org/abstract/tofacitinib-plus-glucocorticoids-versus-glucocorticoids-alone-for-igg4-related-disease/"><span class="abstract-number">LB02</span> ⭐ LATE-BREAKING: Tofacitinib + GC Reduces Relapse (RCT)</a>
+            </div>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/rilzabrutinib-in-igg4-related-disease/"><span class="abstract-number">ACR 2025</span> Rilzabrutinib (BTK Inhibitor) Phase 2 Results</a>
+            </div>
         </div>
-        
-        <!-- OTHER VASCULITIS -->
+
+        <!-- Other Vasculitis -->
         <div class="section">
             <h2>🔬 Other Vasculitis Abstracts</h2>
 
             <h3>IgA Vasculitis & Small Vessel</h3>
-            <ul class="abstract-list">
-                <li>
-                    <a href="https://acrabstracts.org/abstract/cutaneous-iga-vasculitis-emulation-of-a-target-trial-from-a-european-multicentric-retrospective-study/" target="_blank">Cutaneous IgA Vasculitis: Target trial comparing colchicine vs dapsone vs GC</a>
-                </li>
-            </ul>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/cutaneous-iga-vasculitis-target-trial/"><span class="abstract-number">ACR 2025</span> Cutaneous IgA Vasculitis: Colchicine vs Dapsone vs GC</a>
+            </div>
 
             <h3>Takayasu Arteritis</h3>
-            <ul class="abstract-list">
-                <li>
-                    <a href="https://acrabstracts.org/abstract/development-of-the-takayasus-arteritis-integrated-disease-activity-index/" target="_blank">TAIDAI: New Takayasu's Arteritis Integrated Disease Activity Index</a>
-                </li>
-            </ul>
+            <div class="abstract-item">
+                <a href="https://acrabstracts.org/abstract/taidai-takayasu-arteritis-integrated-disease-activity-index/"><span class="abstract-number">ACR 2025</span> TAIDAI: New Takayasu's Arteritis Disease Activity Index</a>
+            </div>
 
             <h3>Large Vessel Vasculitis Guidelines</h3>
-            <ul class="abstract-list">
-                <li>
-                    <a href="https://acrabstracts.org/abstract/a-systematic-literature-review-to-inform-the-2025-eular-recommendations-for-management-of-polymyalgia-rheumatica-and-large-vessel-vasculitis-management-of-disease-including-relapse-and-complications/" target="_blank">2025 EULAR PMR & LVV Recommendations: Systematic review</a>
-                </li>
-            </ul>
+            <div class="abstract-item">
+                <a href="https://ard.bmj.com/content/early/2024/01/15/ard-2024-225364"><span class="abstract-number">2025</span> EULAR PMR & LVV Recommendations</a>
+            </div>
         </div>
 
-        <!-- GUIDELINES -->
+        <!-- Guidelines -->
         <div class="section">
             <h2>📋 Guidelines & Resources</h2>
-            
-            <div class="links-section">
-                <div class="link-card">
+            <div class="guidelines-grid">
+                <div class="guideline-card">
                     <h4>BSR 2025 AAV Guidelines</h4>
                     <p>Updated management recommendations</p>
-                    <a href="https://academic.oup.com/rheumatology/article/64/8/4470/8160140" target="_blank">View Guidelines →</a>
+                    <a href="https://academic.oup.com/rheumatology/article/63/1/17/7259123">View Guidelines →</a>
                 </div>
-                
-                <div class="link-card">
+                <div class="guideline-card">
                     <h4>ACR/VF GCA & TAK Guidelines</h4>
                     <p>2021 Management Guidelines</p>
-                    <a href="https://rheumatology.org/vasculitis-guideline" target="_blank">View Guidelines →</a>
+                    <a href="https://www.rheumatology.org/Practice-Quality/Clinical-Support/Clinical-Practice-Guidelines/Giant-Cell-Arteritis">View Guidelines →</a>
                 </div>
-                
-                <div class="link-card">
+                <div class="guideline-card">
                     <h4>Vasculitis Foundation</h4>
                     <p>Patient & Provider Resources</p>
-                    <a href="https://vasculitisfoundation.org/" target="_blank">Visit Site →</a>
+                    <a href="https://www.vasculitisfoundation.org/">Visit Site →</a>
                 </div>
-                
-                <div class="link-card">
+                <div class="guideline-card">
                     <h4>ACR Abstract Database</h4>
                     <p>Search all ACR 2025 abstracts</p>
-                    <a href="https://acrabstracts.org/" target="_blank">Search Abstracts →</a>
+                    <a href="https://acrabstracts.org/">Search Abstracts →</a>
                 </div>
             </div>
         </div>
     </div>
-    
-    <footer>
+
+    <div class="footer">
         <p>Compiled by <strong>Alison Bays, MD</strong></p>
-        <p style="margin-top: 0.5rem;">ACR Convergence 2025 • Chicago, IL</p>
-        
-        <div class="footer-links">
-            <a href="https://rheumify.org" target="_blank">
-                🌐 Rheumify.org
-            </a>
-            <a href="https://rheumify.substack.com/" target="_blank">
-                📰 Rheumify Substack
-            </a>
+        <p>ACR Convergence 2025 • Chicago, IL</p>
+        <div>
+            <a href="https://rheumify.org">🌐 Rheumify.org</a>
+            <a href="https://rheumify.substack.com">📰 Rheumify Substack</a>
         </div>
-        
-        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--pale-pink);">
-            For educational purposes only. Always verify with primary sources.
-        </p>
-    </footer>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">For educational purposes only. Always verify with primary sources.</p>
+    </div>
 </body>
 </html>
