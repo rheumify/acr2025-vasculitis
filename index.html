@@ -39,10 +39,34 @@
             margin-bottom: 1rem;
         }
 
+        .author-info .author-name {
+            font-size: 1.3rem;
+        }
+
         .author-info a {
             color: #ffd700;
             text-decoration: none;
             margin: 0 0.5rem;
+        }
+
+        .search-bar {
+            background: rgba(255, 215, 0, 0.15);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .search-bar a {
+            color: #ffd700;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ffd700;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .search-bar a:hover {
+            background: rgba(255, 215, 0, 0.2);
         }
 
         .container {
@@ -224,14 +248,16 @@
 <body>
     <div class="header">
         <div class="author-info">
-            <strong>Alison Bays, MD</strong><br>
+            <span class="author-name"><strong>Alison Bays, MD</strong></span><br>
             <a href="https://rheumify.org">🌐 Rheumify.org</a> •
             <a href="https://rheumify.substack.com">📰 Substack</a>
         </div>
         <h1>ACR Convergence 2025</h1>
         <p>Vasculitis Highlights & Resources</p>
         <p>Chicago, IL • November 14-19, 2025</p>
-        <p style="margin-top: 1rem;"><a href="https://acrabstracts.org/meetings/acr-convergence-2025/" style="color: #ffd700; text-decoration: none; padding: 0.5rem 1rem; border: 1px solid #ffd700; border-radius: 20px;">🔍 Search All ACR 2025 Abstracts</a></p>
+    </div>
+    <div class="search-bar">
+        <a href="https://acrabstracts.org/meetings/acr-convergence-2025/">🔍 Search All ACR 2025 Abstracts</a>
     </div>
 
     <div class="container">
